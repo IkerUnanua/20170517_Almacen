@@ -3,7 +3,7 @@
     Dim cantidadTotal As Integer = 0
     Private Sub Juego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim fileReader As System.IO.StreamReader
-        fileReader = My.Computer.FileSystem.OpenTextFileReader("articulos.txt")
+        fileReader = My.Computer.FileSystem.OpenTextFileReader("ficheros/articulos.txt")
         Dim stringReader As String
         Dim lines As String()
 

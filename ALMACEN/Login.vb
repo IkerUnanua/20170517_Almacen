@@ -12,7 +12,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAcceder.Click
         Dim fileReader As System.IO.StreamReader
-        fileReader = My.Computer.FileSystem.OpenTextFileReader("usuarios.txt")
+        fileReader = My.Computer.FileSystem.OpenTextFileReader("ficheros/usuarios.txt")
         Dim stringReader As String
         Dim lines As String()
         Dim lines2 As String()

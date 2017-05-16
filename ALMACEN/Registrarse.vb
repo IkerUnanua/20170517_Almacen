@@ -7,7 +7,7 @@ Public Class Registrarse
             MsgBox("Por favor rellene toda la información pedida para completar su registro. Gracias.")
         Else
 
-            Dim usuario As New StreamWriter("usuarios.txt", True)
+            Dim usuario As New StreamWriter("ficheros/usuarios.txt", True)
             'voy a la ultima linea
             If usuario.ToString.Contains(txtUsuario.Text) Then
                 MsgBox("Lo sentimos pero ese usuario ya se encuentra registrado, por favor seleccione otro nombre para completar el registro.")

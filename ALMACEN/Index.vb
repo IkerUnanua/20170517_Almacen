@@ -10,14 +10,14 @@ Public Class index
     End Sub
 
     Private Sub btnInstrucciones_Click(sender As Object, e As EventArgs) Handles btnInstrucciones.Click
-        Dim file As New StreamReader("intrucciones.txt")
+        Dim file As New StreamReader("ficheros/intrucciones.txt")
 
         MsgBox(file.ReadToEnd())
         file.Close()
     End Sub
 
     Private Sub btnRanking_Click(sender As Object, e As EventArgs) Handles btnRanking.Click
-        Dim file As New StreamReader("ranking.txt")
+        Dim file As New StreamReader("ficheros/ranking.txt")
 
         MsgBox(file.ReadToEnd())
         file.Close()
