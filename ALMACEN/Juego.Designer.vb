@@ -22,6 +22,7 @@ Partial Class Juego
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Juego))
         Me.pCarrito = New System.Windows.Forms.PictureBox()
         Me.lstPedidos = New System.Windows.Forms.ListBox()
@@ -41,6 +42,7 @@ Partial Class Juego
         Me.lstAlmacen = New System.Windows.Forms.ListBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.pCarrito, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -268,4 +270,5 @@ Partial Class Juego
     Friend WithEvents lstAlmacen As ListBox
     Friend WithEvents Label3 As Label
     Friend WithEvents btnReset As Button
+    Friend WithEvents Timer1 As Timer
 End Class

@@ -3,7 +3,7 @@
     Dim cantidadTotal As Integer = 0
     Private Sub Juego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim fileReader As System.IO.StreamReader
-        fileReader = My.Computer.FileSystem.OpenTextFileReader("ficheros/articulos.txt")
+        fileReader = My.Computer.FileSystem.OpenTextFileReader("articulos.txt")
         Dim stringReader As String
         Dim lines As String()
 
@@ -61,7 +61,7 @@
             stock = tienda.Articulos(i).Stock
             lstAlmacen.Items.Add(stock + "-" + nombre)
         Next
-
+        btnReset.Enabled = False
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click, Button3.Click, Button4.Click, Button5.Click, Button6.Click, Button7.Click, Button8.Click, Button9.Click, Button10.Click
         Dim cantidadStr As String
@@ -119,8 +119,9 @@
         Next
 
 
-
+        btnComprar.Enabled = True
         boton.Enabled = False
+        boton.BackColor = Color.Red
     End Sub
 
     Private Sub btnComprar_Click(sender As Object, e As EventArgs) Handles btnComprar.Click
@@ -151,24 +152,39 @@
             stock = tienda.Articulos(i).Stock
             lstAlmacen.Items.Add(stock + "-" + nombre)
         Next
+        btnComprar.Enabled = False
     End Sub
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
 
         lstPedidos.Items.Clear()
         Button1.Enabled = True
+        Button1.BackColor = Color.Beige
         Button2.Enabled = True
+        Button2.BackColor = Color.Beige
         Button3.Enabled = True
-        Button3.Enabled = True
+        Button3.BackColor = Color.Beige
         Button4.Enabled = True
+        Button4.BackColor = Color.Beige
         Button5.Enabled = True
+        Button5.BackColor = Color.Beige
         Button6.Enabled = True
+        Button6.BackColor = Color.Beige
         Button7.Enabled = True
+        Button7.BackColor = Color.Beige
         Button8.Enabled = True
+        Button8.BackColor = Color.Beige
         Button9.Enabled = True
+        Button9.BackColor = Color.Beige
         Button10.Enabled = True
+        Button10.BackColor = Color.Beige
         For i = 0 To tienda.Articulos.Count - 1
             tienda.Articulos(i).Stock = 50
         Next
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
     End Sub
 End Class
