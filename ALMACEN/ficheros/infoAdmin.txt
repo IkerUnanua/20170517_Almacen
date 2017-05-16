@@ -1,0 +1,3 @@
+Hola Miriam.
+En este sitio podras configurar tanto los articulos que compraran los alumnos como los precios de estos.
+También podras ver los alumnos registrados y sus contraseñas por si a alguno se le olvida.

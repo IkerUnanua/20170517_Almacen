@@ -1,0 +1,10 @@
+Articulo:Boligrafos
+Articulo:Lapices
+Articulo:Tipex
+Articulo:Gomas
+Articulo:Calculadoras
+Articulo:Rotuladores
+Articulo:Folios
+Articulo:Taladradoras
+Articulo:Grapadoras
+Articulo:Tijeras
