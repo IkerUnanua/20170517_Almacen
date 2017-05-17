@@ -217,6 +217,9 @@ Partial Class Juego
         Me.btnReset.Text = "Reset"
         Me.btnReset.UseVisualStyleBackColor = True
         '
+        'Timer1
+        '
+        '
         'Juego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
