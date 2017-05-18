@@ -62,6 +62,8 @@
             lstAlmacen.Items.Add(stock + "-" + nombre)
         Next
         btnReset.Enabled = False
+        My.Computer.Audio.Play(My.Resources.Musica_electronica_para_juegos, AudioPlayMode.BackgroundLoop)
+
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click, Button3.Click, Button4.Click, Button5.Click, Button6.Click, Button7.Click, Button8.Click, Button9.Click, Button10.Click
         Dim cantidadStr As String
@@ -185,6 +187,11 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+    End Sub
+
+    Private Sub Juego_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        My.Computer.Audio.Stop()
 
     End Sub
 End Class
