@@ -41,6 +41,10 @@
         fileReader.Close()
     End Sub
 
+    Private Sub SetResolution(v1 As Integer, v2 As Integer, v3 As Integer)
+        Throw New NotImplementedException()
+    End Sub
+
     Private Sub txtContraseña_TextChanged(sender As Object, e As EventArgs) Handles txtContraseña.TextChanged
         txtContraseña.PasswordChar = "*"
     End Sub
