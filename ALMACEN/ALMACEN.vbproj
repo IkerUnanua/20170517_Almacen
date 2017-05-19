@@ -187,6 +187,7 @@
     <Content Include="ficheros\usuarios.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Musica electronica para juegos.wav" />
     <None Include="Resources\Spinning Seal - GifSound.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

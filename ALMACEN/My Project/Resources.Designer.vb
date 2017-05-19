@@ -63,6 +63,15 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
+        Friend ReadOnly Property Musica_electronica_para_juegos() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Musica_electronica_para_juegos", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
         Friend ReadOnly Property Spinning_Seal___GifSound() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("Spinning_Seal___GifSound", resourceCulture)
