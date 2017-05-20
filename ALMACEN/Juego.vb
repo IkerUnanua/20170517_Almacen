@@ -1,12 +1,15 @@
-﻿Public Class Juego
+﻿Imports System.IO
+
+Public Class Juego
     Dim precio As Integer = 0
     Dim cantidadTotal As Integer = 0
+    Dim contEnunciados As Integer = 0
+    Dim lines2 As String()
     Private Sub Juego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim fileReader As System.IO.StreamReader
         fileReader = My.Computer.FileSystem.OpenTextFileReader("ficheros/articulos.txt")
         Dim stringReader As String
         Dim lines As String()
-
         Dim cont As Integer = 0
 
         'Bucle recorre fichero
@@ -63,7 +66,13 @@
         Next
         btnReset.Enabled = False
         My.Computer.Audio.Play(My.Resources.Musica_electronica_para_juegos, AudioPlayMode.BackgroundLoop)
-
+        Dim file As New StreamReader("ficheros/enunciados.txt")
+        Dim stringReader2 As String
+        Do
+            stringReader2 = fileReader.ReadLine()
+            lines2 = stringReader2.Split(":")
+        Loop Until file.EndOfStream
+        lblEnunciado.Text = lines2(cont)
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click, Button3.Click, Button4.Click, Button5.Click, Button6.Click, Button7.Click, Button8.Click, Button9.Click, Button10.Click
         Dim cantidadStr As String
@@ -122,6 +131,7 @@
 
 
         btnComprar.Enabled = True
+        btnReset.Enabled = True
         boton.Enabled = False
         boton.BackColor = Color.Red
     End Sub
@@ -132,7 +142,7 @@
         Dim booleano As Boolean = True
         Dim cantidadTotalStr As String
         Do
-            comprarStr = InputBox("Cuanta cantidad de articulos has comprado amable señor")
+            comprarStr = InputBox("Cuanta cantidad de articulos has comprado amable señor/señora")
             If Not Integer.TryParse(comprarStr, comprar) Then
                 booleano = False
                 MsgBox("Error, número no válido")
@@ -155,6 +165,7 @@
             lstAlmacen.Items.Add(stock + "-" + nombre)
         Next
         btnComprar.Enabled = False
+        lblEnunciado.Text = lines2(contEnunciados)
     End Sub
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
@@ -183,7 +194,7 @@
         For i = 0 To tienda.Articulos.Count - 1
             tienda.Articulos(i).Stock = 50
         Next
-
+        btnReset.Enabled = False
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

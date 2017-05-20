@@ -23,6 +23,8 @@ Partial Class Administrador
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnArticulos = New System.Windows.Forms.Button()
+        Me.btnEnunciados = New System.Windows.Forms.Button()
         Me.btnInfo = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -36,13 +38,31 @@ Partial Class Administrador
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Hola administradora"
         '
+        'btnArticulos
+        '
+        Me.btnArticulos.Location = New System.Drawing.Point(542, 299)
+        Me.btnArticulos.Name = "btnArticulos"
+        Me.btnArticulos.Size = New System.Drawing.Size(113, 23)
+        Me.btnArticulos.TabIndex = 1
+        Me.btnArticulos.Text = "Cambiar productos"
+        Me.btnArticulos.UseVisualStyleBackColor = True
+        '
+        'btnEnunciados
+        '
+        Me.btnEnunciados.Location = New System.Drawing.Point(137, 299)
+        Me.btnEnunciados.Name = "btnEnunciados"
+        Me.btnEnunciados.Size = New System.Drawing.Size(113, 23)
+        Me.btnEnunciados.TabIndex = 2
+        Me.btnEnunciados.Text = "Cambiar enunciados"
+        Me.btnEnunciados.UseVisualStyleBackColor = True
+        '
         'btnInfo
         '
-        Me.btnInfo.Location = New System.Drawing.Point(675, 53)
+        Me.btnInfo.Location = New System.Drawing.Point(629, 53)
         Me.btnInfo.Name = "btnInfo"
         Me.btnInfo.Size = New System.Drawing.Size(75, 23)
-        Me.btnInfo.TabIndex = 1
-        Me.btnInfo.Text = "info"
+        Me.btnInfo.TabIndex = 3
+        Me.btnInfo.Text = "Info"
         Me.btnInfo.UseVisualStyleBackColor = True
         '
         'Administrador
@@ -51,6 +71,8 @@ Partial Class Administrador
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(777, 413)
         Me.Controls.Add(Me.btnInfo)
+        Me.Controls.Add(Me.btnEnunciados)
+        Me.Controls.Add(Me.btnArticulos)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Administrador"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -61,5 +83,7 @@ Partial Class Administrador
     End Sub
 
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnArticulos As Button
+    Friend WithEvents btnEnunciados As Button
     Friend WithEvents btnInfo As Button
 End Class

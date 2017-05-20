@@ -27,7 +27,7 @@ Partial Class Juego
         Me.pCarrito = New System.Windows.Forms.PictureBox()
         Me.lstPedidos = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblEnunciado = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -63,7 +63,7 @@ Partial Class Juego
         Me.lstPedidos.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstPedidos.FormattingEnabled = True
         Me.lstPedidos.ItemHeight = 17
-        Me.lstPedidos.Location = New System.Drawing.Point(628, 61)
+        Me.lstPedidos.Location = New System.Drawing.Point(638, 106)
         Me.lstPedidos.Name = "lstPedidos"
         Me.lstPedidos.Size = New System.Drawing.Size(120, 140)
         Me.lstPedidos.TabIndex = 12
@@ -72,20 +72,21 @@ Partial Class Juego
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(660, 42)
+        Me.Label1.Location = New System.Drawing.Point(670, 87)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(59, 16)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Pedidos"
         '
-        'Label2
+        'lblEnunciado
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(403, 230)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(417, 13)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "Por favor arrastre los paquetes de tus pedidos a el carrito para hacer el pedido." &
+        Me.lblEnunciado.AutoSize = True
+        Me.lblEnunciado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEnunciado.Location = New System.Drawing.Point(410, 28)
+        Me.lblEnunciado.Name = "lblEnunciado"
+        Me.lblEnunciado.Size = New System.Drawing.Size(417, 13)
+        Me.lblEnunciado.TabIndex = 14
+        Me.lblEnunciado.Text = "Por favor arrastre los paquetes de tus pedidos a el carrito para hacer el pedido." &
     " Gracias"
         '
         'Button1
@@ -180,7 +181,7 @@ Partial Class Juego
         '
         'btnComprar
         '
-        Me.btnComprar.Location = New System.Drawing.Point(763, 103)
+        Me.btnComprar.Location = New System.Drawing.Point(773, 148)
         Me.btnComprar.Name = "btnComprar"
         Me.btnComprar.Size = New System.Drawing.Size(75, 23)
         Me.btnComprar.TabIndex = 25
@@ -193,7 +194,7 @@ Partial Class Juego
         Me.lstAlmacen.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstAlmacen.FormattingEnabled = True
         Me.lstAlmacen.ItemHeight = 17
-        Me.lstAlmacen.Location = New System.Drawing.Point(406, 61)
+        Me.lstAlmacen.Location = New System.Drawing.Point(443, 106)
         Me.lstAlmacen.Name = "lstAlmacen"
         Me.lstAlmacen.Size = New System.Drawing.Size(120, 140)
         Me.lstAlmacen.TabIndex = 26
@@ -202,7 +203,7 @@ Partial Class Juego
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(393, 42)
+        Me.Label3.Location = New System.Drawing.Point(430, 87)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(146, 16)
         Me.Label3.TabIndex = 27
@@ -210,7 +211,7 @@ Partial Class Juego
         '
         'btnReset
         '
-        Me.btnReset.Location = New System.Drawing.Point(763, 132)
+        Me.btnReset.Location = New System.Drawing.Point(773, 177)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(75, 23)
         Me.btnReset.TabIndex = 28
@@ -241,7 +242,7 @@ Partial Class Juego
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblEnunciado)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lstPedidos)
         Me.Controls.Add(Me.pCarrito)
@@ -258,7 +259,7 @@ Partial Class Juego
     Friend WithEvents pCarrito As PictureBox
     Friend WithEvents lstPedidos As ListBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblEnunciado As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
