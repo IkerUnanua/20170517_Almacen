@@ -1,6 +1,6 @@
-Articulo:Boligrafos
-Articulo:Lapices
-Articulo:Tipex
+﻿Articulo:Bolígrafos
+Articulo:Lápices
+Articulo:Típex
 Articulo:Gomas
 Articulo:Calculadoras
 Articulo:Rotuladores

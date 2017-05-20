@@ -30,6 +30,9 @@ Partial Class index
         Me.btnAdministrador = New System.Windows.Forms.Button()
         Me.btnRanking = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,10 +84,28 @@ Partial Class index
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.Name = "Label2"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Name = "Label3"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.Name = "Label4"
+        '
         'index
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnRanking)
         Me.Controls.Add(Me.btnAdministrador)
@@ -109,4 +130,7 @@ Partial Class index
     Friend WithEvents btnAdministrador As Button
     Friend WithEvents btnRanking As Button
     Friend WithEvents btnSalir As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class
