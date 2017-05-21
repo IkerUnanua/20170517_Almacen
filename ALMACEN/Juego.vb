@@ -68,9 +68,11 @@ Public Class Juego
         My.Computer.Audio.Play(My.Resources.Musica_electronica_para_juegos, AudioPlayMode.BackgroundLoop)
         Dim file As New StreamReader("ficheros/enunciados.txt")
         Dim stringReader2 As String
+        Dim cont2 As Integer = 0
         Do
-            stringReader2 = fileReader.ReadLine()
-            lines2 = stringReader2.Split(":")
+            stringReader2 = file.ReadLine()
+            Array.Resize(lines2, lines2.Length + 1)
+            lines2(cont) = stringReader2.Split(":")
         Loop Until file.EndOfStream
         lblEnunciado.Text = lines2(cont)
     End Sub
@@ -141,6 +143,7 @@ Public Class Juego
         Dim comprar As Integer
         Dim booleano As Boolean = True
         Dim cantidadTotalStr As String
+        contEnunciados = contEnunciados + 1
         Do
             comprarStr = InputBox("Cuanta cantidad de articulos has comprado amable señor/señora")
             If Not Integer.TryParse(comprarStr, comprar) Then
@@ -165,7 +168,11 @@ Public Class Juego
             lstAlmacen.Items.Add(stock + "-" + nombre)
         Next
         btnComprar.Enabled = False
-        lblEnunciado.Text = lines2(contEnunciados)
+        If lines2.Length < contEnunciados Then
+            contEnunciados = 0
+            lblEnunciado.Text = lines2(contEnunciados)
+        End If
+
     End Sub
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
