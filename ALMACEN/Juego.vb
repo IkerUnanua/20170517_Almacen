@@ -4,7 +4,7 @@ Public Class Juego
     Dim precio As Integer = 0
     Dim cantidadTotal As Integer = 0
     Dim contEnunciados As Integer = 0
-    Dim lines2 As String()
+    Dim lines2 As New List(Of String)
     Private Sub Juego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim fileReader As System.IO.StreamReader
         fileReader = My.Computer.FileSystem.OpenTextFileReader("ficheros/articulos.txt")
@@ -69,12 +69,13 @@ Public Class Juego
         Dim file As New StreamReader("ficheros/enunciados.txt")
         Dim stringReader2 As String
         Dim cont2 As Integer = 0
+
         Do
             stringReader2 = file.ReadLine()
-            Array.Resize(lines2, lines2.Length + 1)
-            lines2(cont) = stringReader2.Split(":")
+
+            lines2.Add(stringReader2)
         Loop Until file.EndOfStream
-        lblEnunciado.Text = lines2(cont)
+        lblEnunciado.Text = lines2(cont2)
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click, Button3.Click, Button4.Click, Button5.Click, Button6.Click, Button7.Click, Button8.Click, Button9.Click, Button10.Click
         Dim cantidadStr As String
@@ -168,7 +169,7 @@ Public Class Juego
             lstAlmacen.Items.Add(stock + "-" + nombre)
         Next
         btnComprar.Enabled = False
-        If lines2.Length < contEnunciados Then
+        If lines2.Count < contEnunciados Then
             contEnunciados = 0
             lblEnunciado.Text = lines2(contEnunciados)
         End If
