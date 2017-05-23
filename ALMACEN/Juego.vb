@@ -64,7 +64,7 @@ Public Class Juego
             stock = tienda.Articulos(i).Stock
             lstAlmacen.Items.Add(stock + "-" + nombre)
         Next
-        btnReset.Enabled = False
+        btnOtraPregunta.Enabled = False
         My.Computer.Audio.Play(My.Resources.Musica_electronica_para_juegos, AudioPlayMode.BackgroundLoop)
         Dim file As New StreamReader("ficheros/enunciados.txt")
         Dim stringReader2 As String
@@ -79,62 +79,72 @@ Public Class Juego
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click, Button3.Click, Button4.Click, Button5.Click, Button6.Click, Button7.Click, Button8.Click, Button9.Click, Button10.Click
         Dim cantidadStr As String
-        Dim booleano As Boolean = True
+        Dim esNumeroValido As Boolean = True
         Dim booleano2 As Boolean = True
         Dim cantidad As Integer
         Dim respuestaStr As String
         Dim respuesta As Integer
-        Dim stockStr As String
-        Dim num As Integer = 0
+        Dim posArticulo As Integer = 0
         Dim boton As Button = TryCast(sender, Button)
         pCarrito.Visible = True
         'No se meten espacios en blanco o nada. Disculpen las molestias, estamos trabajando arduamente para solucionar el problema. Arkaitz esta hablando con sus contactos para solucionar el problema.
         Do
             cantidadStr = InputBox("Cuanta cantidad de " + boton.Text + " desea?")
-            If Not Integer.TryParse(cantidadStr, cantidad) OrElse String.IsNullOrWhiteSpace(cantidadStr) Then
-                booleano = False
+            If String.IsNullOrWhiteSpace(cantidadStr) Then
+                Exit Sub
+            End If
+            If Not Integer.TryParse(cantidadStr, cantidad) Then
+                esNumeroValido = False
                 MsgBox("Error, número no válido")
-            End If
-            Dim booleano3 As Boolean = False
-            For i = 0 To tienda.Articulos.Count - 1
-                If Button1.Text = tienda.Articulos(i).Nombre Then
-                    num = i
-                    booleano3 = True
-                End If
-                If booleano3 = False Then
-                    MsgBox("Error, número mayor al stock")
-                End If
-            Next
-        Loop Until booleano = True AndAlso cantidad <= tienda.Articulos(num).Stock
-        For i = 0 To tienda.Articulos.Count - 1
-            Dim stock As Integer = 0
-            If tienda.Articulos(i).Nombre = boton.Text Then
-                lstPedidos.Items.Add(cantidadStr + "-" + boton.Text)
+            Else
+                esNumeroValido = True
 
-                stock = tienda.Articulos(i).Stock
-                stock = stock - cantidad
-                tienda.Articulos(i).Stock = stock
-                cantidadTotal = cantidadTotal + cantidad
-
-                Do
-                    respuestaStr = InputBox("¿Cuantos paquetes quedan en el articulo " + tienda.Articulos(i).Nombre + "?")
-                    If Not Integer.TryParse(respuestaStr, respuesta) Then
-                        booleano2 = False
-                        MsgBox("Error, número no válido")
+                For i = 0 To tienda.Articulos.Count - 1
+                    If boton.Text = tienda.Articulos(i).Nombre Then
+                        posArticulo = i
+                        If cantidad > tienda.Articulos(i).Stock Then
+                            MsgBox("Error, cantidad mayor al stock")
+                            esNumeroValido = False
+                        End If
+                        Exit For
                     End If
-                Loop Until booleano2 = True
-                If respuesta = stock Then
-                    MsgBox("Enhorabuena crack! Has acertado, era justo esa cantidad la que queda en stock")
-                Else
-                    stockStr = stock
-                    MsgBox("Lo sentimos pero la cantidad que queda en stock de ese articulo es " + stockStr + ". Más suerte la próxima vez ;) ")
-                End If
+
+                Next
             End If
-        Next
+        Loop Until esNumeroValido = True
+
+
+        Dim stock As Integer = 0
+        If tienda.Articulos(posArticulo).Nombre = boton.Text Then
+            lstPedidos.Items.Add(cantidadStr + "-" + boton.Text)
+            stock = tienda.Articulos(posArticulo).Stock
+            stock = stock - cantidad
+            tienda.Articulos(posArticulo).Stock = stock
+            cantidadTotal = cantidadTotal + cantidad
+
+            Do
+
+                respuestaStr = InputBox("¿Cuantos paquetes quedan en el articulo " + tienda.Articulos(posArticulo).Nombre + "?")
+
+                If Not Integer.TryParse(respuestaStr, respuesta) Then
+                    booleano2 = False
+                    MsgBox("Error, número no válido")
+                Else
+                    booleano2 = True
+                End If
+            Loop Until booleano2 = True
+            If respuesta = stock Then
+                MsgBox("Enhorabuena crack! Has acertado, era justo esa cantidad la que queda en stock")
+            Else
+
+                MsgBox("Lo sentimos pero la cantidad que queda en stock de ese articulo es " + stock.ToString + ". Más suerte la próxima vez ;) ")
+            End If
+        End If
+
 
 
         btnComprar.Enabled = True
-        btnReset.Enabled = True
+        btnOtraPregunta.Enabled = True
         boton.Enabled = False
         boton.BackColor = Color.Red
     End Sub
@@ -169,14 +179,14 @@ Public Class Juego
             lstAlmacen.Items.Add(stock + "-" + nombre)
         Next
         btnComprar.Enabled = False
-        If lines2.Count < contEnunciados Then
-            contEnunciados = 0
+        If lines2.Count >= contEnunciados Then
+
             lblEnunciado.Text = lines2(contEnunciados)
         End If
 
     End Sub
 
-    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnOtraPregunta.Click
 
         lstPedidos.Items.Clear()
         Button1.Enabled = True
@@ -202,7 +212,7 @@ Public Class Juego
         For i = 0 To tienda.Articulos.Count - 1
             tienda.Articulos(i).Stock = 50
         Next
-        btnReset.Enabled = False
+        btnOtraPregunta.Enabled = False
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

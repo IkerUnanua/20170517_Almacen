@@ -41,7 +41,7 @@ Partial Class Juego
         Me.btnComprar = New System.Windows.Forms.Button()
         Me.lstAlmacen = New System.Windows.Forms.ListBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnReset = New System.Windows.Forms.Button()
+        Me.btnOtraPregunta = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.pCarrito, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -209,14 +209,14 @@ Partial Class Juego
         Me.Label3.TabIndex = 27
         Me.Label3.Text = "Pedidos en el almacen"
         '
-        'btnReset
+        'btnOtraPregunta
         '
-        Me.btnReset.Location = New System.Drawing.Point(773, 177)
-        Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(75, 23)
-        Me.btnReset.TabIndex = 28
-        Me.btnReset.Text = "Reset"
-        Me.btnReset.UseVisualStyleBackColor = True
+        Me.btnOtraPregunta.Location = New System.Drawing.Point(773, 177)
+        Me.btnOtraPregunta.Name = "btnOtraPregunta"
+        Me.btnOtraPregunta.Size = New System.Drawing.Size(75, 44)
+        Me.btnOtraPregunta.TabIndex = 28
+        Me.btnOtraPregunta.Text = "Otra pregunta"
+        Me.btnOtraPregunta.UseVisualStyleBackColor = True
         '
         'Timer1
         '
@@ -228,7 +228,7 @@ Partial Class Juego
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(850, 472)
-        Me.Controls.Add(Me.btnReset)
+        Me.Controls.Add(Me.btnOtraPregunta)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lstAlmacen)
         Me.Controls.Add(Me.btnComprar)
@@ -273,6 +273,6 @@ Partial Class Juego
     Friend WithEvents btnComprar As Button
     Friend WithEvents lstAlmacen As ListBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents btnReset As Button
+    Friend WithEvents btnOtraPregunta As Button
     Friend WithEvents Timer1 As Timer
 End Class
