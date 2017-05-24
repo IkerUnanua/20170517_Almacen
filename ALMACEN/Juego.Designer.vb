@@ -42,6 +42,9 @@ Partial Class Juego
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnOtraPregunta = New System.Windows.Forms.Button()
         Me.btnPedir = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnMusica = New System.Windows.Forms.Button()
         CType(Me.pCarrito, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,7 +84,7 @@ Partial Class Juego
         '
         Me.lblEnunciado.AutoSize = True
         Me.lblEnunciado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEnunciado.Location = New System.Drawing.Point(410, 28)
+        Me.lblEnunciado.Location = New System.Drawing.Point(394, 42)
         Me.lblEnunciado.Name = "lblEnunciado"
         Me.lblEnunciado.Size = New System.Drawing.Size(417, 13)
         Me.lblEnunciado.TabIndex = 14
@@ -226,6 +229,34 @@ Partial Class Juego
         Me.btnPedir.Text = "Pedir paquetes"
         Me.btnPedir.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(394, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(142, 13)
+        Me.Label2.TabIndex = 30
+        Me.Label2.Text = "Debera comprar lo siguiente:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(394, 378)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(73, 13)
+        Me.Label4.TabIndex = 31
+        Me.Label4.Text = "Música on/off"
+        '
+        'btnMusica
+        '
+        Me.btnMusica.BackColor = System.Drawing.Color.LimeGreen
+        Me.btnMusica.Location = New System.Drawing.Point(407, 411)
+        Me.btnMusica.Name = "btnMusica"
+        Me.btnMusica.Size = New System.Drawing.Size(39, 29)
+        Me.btnMusica.TabIndex = 32
+        Me.btnMusica.Text = "On"
+        Me.btnMusica.UseVisualStyleBackColor = False
+        '
         'Juego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -233,6 +264,9 @@ Partial Class Juego
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(850, 472)
+        Me.Controls.Add(Me.btnMusica)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnPedir)
         Me.Controls.Add(Me.btnOtraPregunta)
         Me.Controls.Add(Me.Label3)
@@ -281,4 +315,7 @@ Partial Class Juego
     Friend WithEvents Label3 As Label
     Friend WithEvents btnOtraPregunta As Button
     Friend WithEvents btnPedir As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents btnMusica As Button
 End Class

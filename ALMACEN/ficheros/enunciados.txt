@@ -1,4 +1,12 @@
-Por favor compre 2 paquetes de gomas
-Por favor compre 14 paquetes de taladradoras
-Por favor compre 2 paquetes de gomas y 3 de bolígrafos
-Por favor compre 1 paquete de tijeras, 3 de calculadoras y 5 de lápices
+ï»¿Grapadoras;5
+--
+Rotuladores;10
+Taladradoras;1
+--
+Tijeras;2
+Grapadoras;4
+Folios;14
+--
+Gomas;24
+Rotuladores;33
+--
