@@ -118,8 +118,9 @@ Public Class Juego
         Dim boton As Button = TryCast(sender, Button)
         Dim esArticuloBueno As Boolean = False
         Dim esStockBueno As Boolean = False
-        For i = 0 To contEnunciados
-            If enunciadoArticulo(contEnunciados) = boton.Text Then
+        Dim contEnunciados2 As Integer = contEnunciados
+        For i = 0 To enunciadoCont(contEnunciados) - 1
+            If enunciadoArticulo(contEnunciados + i) = boton.Text Then
                 esArticuloBueno = True
             End If
         Next
@@ -195,7 +196,7 @@ Public Class Juego
 
 
             btnComprar.Enabled = True
-            btnOtraPregunta.Enabled = True
+
             boton.Enabled = False
 
         Else
@@ -262,6 +263,7 @@ Public Class Juego
         Button9.BackColor = Color.BlueViolet
         Button10.Enabled = False
         Button10.BackColor = Color.BlueViolet
+        btnOtraPregunta.Enabled = True
     End Sub
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnOtraPregunta.Click
@@ -294,8 +296,8 @@ Public Class Juego
             lblEnunciado.Text = enunciadoStock(contEnunciados).ToString + "-" + enunciadoArticulo(contEnunciados)
         ElseIf enunciadoCont(contEnunciados) > 1 Then
 
-            For i = 0 To enunciadoCont(contEnunciados)
-                lblEnunciado.Text = lblEnunciado.Text + enunciadoStock(i).ToString + "-" + enunciadoArticulo(i) + " "
+            For i = 0 To enunciadoCont(contEnunciados) - 1
+                lblEnunciado.Text = lblEnunciado.Text + enunciadoStock(contEnunciados + i).ToString + "-" + enunciadoArticulo(contEnunciados + i) + " "
             Next
 
         End If
