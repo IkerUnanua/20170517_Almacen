@@ -197,6 +197,9 @@
     <Content Include="ficheros\usuarios.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Witch Doctor - Ooh Eeh Ooh Ah Aah Ting Tang Walla Walla Bing.wav" />
+    <None Include="Resources\Spice Girls - Wannabe %28Lyrics%29.wav" />
+    <None Include="Resources\Cotton-Eye Joe Lyrics.wav" />
     <None Include="Resources\Musica electronica para juegos.wav" />
     <None Include="Resources\Spinning Seal - GifSound.wav" />
   </ItemGroup>

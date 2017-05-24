@@ -86,10 +86,9 @@ Partial Class Juego
         Me.lblEnunciado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEnunciado.Location = New System.Drawing.Point(394, 42)
         Me.lblEnunciado.Name = "lblEnunciado"
-        Me.lblEnunciado.Size = New System.Drawing.Size(417, 13)
+        Me.lblEnunciado.Size = New System.Drawing.Size(327, 13)
         Me.lblEnunciado.TabIndex = 14
-        Me.lblEnunciado.Text = "Por favor arrastre los paquetes de tus pedidos a el carrito para hacer el pedido." &
-    " Gracias"
+        Me.lblEnunciado.Text = "¿Cuanta cinta adesiva se necesita para pegar un elefante al techo?"
         '
         'Button1
         '

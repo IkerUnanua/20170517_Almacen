@@ -37,6 +37,8 @@ Partial Class minijuego
         Me.pbx1 = New System.Windows.Forms.PictureBox()
         Me.pbx2 = New System.Windows.Forms.PictureBox()
         Me.pbx3 = New System.Windows.Forms.PictureBox()
+        Me.btnMusica = New System.Windows.Forms.Button()
+        Me.lblMusica = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbx1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbx2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,11 +166,32 @@ Partial Class minijuego
         Me.pbx3.TabIndex = 11
         Me.pbx3.TabStop = False
         '
+        'btnMusica
+        '
+        Me.btnMusica.BackColor = System.Drawing.Color.LimeGreen
+        Me.btnMusica.Location = New System.Drawing.Point(629, 386)
+        Me.btnMusica.Name = "btnMusica"
+        Me.btnMusica.Size = New System.Drawing.Size(39, 29)
+        Me.btnMusica.TabIndex = 34
+        Me.btnMusica.Text = "On"
+        Me.btnMusica.UseVisualStyleBackColor = False
+        '
+        'lblMusica
+        '
+        Me.lblMusica.AutoSize = True
+        Me.lblMusica.Location = New System.Drawing.Point(616, 353)
+        Me.lblMusica.Name = "lblMusica"
+        Me.lblMusica.Size = New System.Drawing.Size(73, 13)
+        Me.lblMusica.TabIndex = 33
+        Me.lblMusica.Text = "Música on/off"
+        '
         'minijuego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(694, 424)
+        Me.Controls.Add(Me.btnMusica)
+        Me.Controls.Add(Me.lblMusica)
         Me.Controls.Add(Me.pbx3)
         Me.Controls.Add(Me.pbx2)
         Me.Controls.Add(Me.pbx1)
@@ -181,7 +204,9 @@ Partial Class minijuego
         Me.Controls.Add(Me.btnTijeras)
         Me.Controls.Add(Me.btnPiedras)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "minijuego"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "minijuego"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbx1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -205,4 +230,6 @@ Partial Class minijuego
     Friend WithEvents pbx1 As PictureBox
     Friend WithEvents pbx2 As PictureBox
     Friend WithEvents pbx3 As PictureBox
+    Friend WithEvents btnMusica As Button
+    Friend WithEvents lblMusica As Label
 End Class

@@ -118,10 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Cotton_Eye_Joe_Lyrics" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cotton-Eye Joe Lyrics.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Musica_electronica_para_juegos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Musica electronica para juegos.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Spice_Girls___Wannabe__Lyrics_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spice Girls - Wannabe (Lyrics).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Spinning_Seal___GifSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spinning Seal - GifSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Witch_Doctor___Ooh_Eeh_Ooh_Ah_Aah_Ting_Tang_Walla_Walla_Bing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Witch Doctor - Ooh Eeh Ooh Ah Aah Ting Tang Walla Walla Bing.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

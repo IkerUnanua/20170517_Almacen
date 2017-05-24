@@ -38,16 +38,33 @@ Public Class Administrador
     Private Sub btnEnunciados_Click(sender As Object, e As EventArgs) Handles btnEnunciados.Click
         Dim file As New StreamWriter("ficheros/enunciados.txt")
         Dim cont As Integer = 0
-        Dim enunciado As String
+        Dim articulo As String
+        Dim cantidadStr As String
+        Dim cantidad As Integer
+        Dim esNumeroValido As Boolean = False
         Do
             cont = cont + 1
-            enunciado = InputBox("Por favor introduzca el " + cont.ToString + "º enunciado")
-            If enunciado = "" Then
+            articulo = InputBox("Por favor introduzca el " + cont.ToString + "º articulo")
+            If articulo = "" Then
                 MsgBox("Se ha terminado de introducir usuarios")
             Else
-                file.WriteLine("Enunciado:" + enunciado)
+                Do
+
+                    cantidadStr = InputBox("Cuanta cantidad desea?")
+                    If String.IsNullOrWhiteSpace(cantidadStr) Then
+                        Exit Sub
+                    End If
+                    If Not Integer.TryParse(cantidadStr, cantidad) Then
+                        esNumeroValido = False
+                        MsgBox("Error, número no válido")
+                    Else
+                        esNumeroValido = True
+                    End If
+                Loop Until esNumeroValido = True
+
+                file.WriteLine(articulo + ";" + cantidadStr)
             End If
-        Loop Until enunciado = ""
+        Loop Until articulo = ""
         file.Close()
     End Sub
 
@@ -60,5 +77,17 @@ Public Class Administrador
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
+    End Sub
+
+    Private Sub btnMusica_Click(sender As Object, e As EventArgs) Handles btnMusica.Click
+        If btnMusica.Text = "On" Then
+            btnMusica.Text = "Off"
+            btnMusica.BackColor = Color.Red
+            My.Computer.Audio.Stop()
+        ElseIf btnMusica.Text = "Off" Then
+            btnMusica.Text = "On"
+            My.Computer.Audio.Play(My.Resources.Spinning_Seal___GifSound, AudioPlayMode.BackgroundLoop)
+            btnMusica.BackColor = Color.Green
+        End If
     End Sub
 End Class

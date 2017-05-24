@@ -30,6 +30,8 @@ Partial Class Administrador
         Me.btnContraseñas = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnMusica = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -98,11 +100,32 @@ Partial Class Administrador
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'btnMusica
+        '
+        Me.btnMusica.BackColor = System.Drawing.Color.LimeGreen
+        Me.btnMusica.Location = New System.Drawing.Point(708, 372)
+        Me.btnMusica.Name = "btnMusica"
+        Me.btnMusica.Size = New System.Drawing.Size(39, 29)
+        Me.btnMusica.TabIndex = 34
+        Me.btnMusica.Text = "On"
+        Me.btnMusica.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(695, 339)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(73, 13)
+        Me.Label4.TabIndex = 33
+        Me.Label4.Text = "Música on/off"
+        '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(777, 413)
+        Me.Controls.Add(Me.btnMusica)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnContraseñas)
@@ -110,6 +133,7 @@ Partial Class Administrador
         Me.Controls.Add(Me.btnEnunciados)
         Me.Controls.Add(Me.btnArticulos)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Administrador"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Administrador"
@@ -126,4 +150,6 @@ Partial Class Administrador
     Friend WithEvents btnContraseñas As Button
     Friend WithEvents btnSalir As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnMusica As Button
+    Friend WithEvents Label4 As Label
 End Class

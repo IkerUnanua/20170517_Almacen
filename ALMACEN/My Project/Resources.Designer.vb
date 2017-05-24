@@ -63,6 +63,15 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
+        Friend ReadOnly Property Cotton_Eye_Joe_Lyrics() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Cotton_Eye_Joe_Lyrics", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
         Friend ReadOnly Property Musica_electronica_para_juegos() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("Musica_electronica_para_juegos", resourceCulture)
@@ -72,9 +81,27 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
+        Friend ReadOnly Property Spice_Girls___Wannabe__Lyrics_() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Spice_Girls___Wannabe__Lyrics_", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
         Friend ReadOnly Property Spinning_Seal___GifSound() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("Spinning_Seal___GifSound", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Witch_Doctor___Ooh_Eeh_Ooh_Ah_Aah_Ting_Tang_Walla_Walla_Bing() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Witch_Doctor___Ooh_Eeh_Ooh_Ah_Aah_Ting_Tang_Walla_Walla_Bing", resourceCulture)
             End Get
         End Property
     End Module

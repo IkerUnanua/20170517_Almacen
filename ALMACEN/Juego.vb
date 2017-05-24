@@ -68,7 +68,7 @@ Public Class Juego
             lstAlmacen.Items.Add(stock + "-" + nombre)
         Next
         btnOtraPregunta.Enabled = False
-        My.Computer.Audio.Play(My.Resources.Musica_electronica_para_juegos, AudioPlayMode.BackgroundLoop)
+        My.Computer.Audio.Play(My.Resources.Witch_Doctor___Ooh_Eeh_Ooh_Ah_Aah_Ting_Tang_Walla_Walla_Bing, AudioPlayMode.BackgroundLoop)
         Dim file As New StreamReader("ficheros/enunciados.txt")
         Dim stringReader2 As String
         Dim arrayDatos As String()
@@ -354,7 +354,7 @@ Public Class Juego
             My.Computer.Audio.Stop()
         ElseIf btnMusica.Text = "Off" Then
             btnMusica.Text = "On"
-            My.Computer.Audio.Play(My.Resources.Musica_electronica_para_juegos, AudioPlayMode.BackgroundLoop)
+            My.Computer.Audio.Play(My.Resources.Spice_Girls___Wannabe__Lyrics_, AudioPlayMode.BackgroundLoop)
             btnMusica.BackColor = Color.Green
         End If
     End Sub

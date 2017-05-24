@@ -1,4 +1,6 @@
-﻿Public Class minijuego
+﻿Imports System.ComponentModel
+
+Public Class minijuego
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnPapel.Click, btnPiedras.Click, btnTijeras.Click
         Dim boton As Button = TryCast(sender, Button)
         Dim array As String() = {"Papel", "Tijera", "Piedra"}
@@ -42,6 +44,8 @@
     End Sub
 
     Private Sub minijuego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblMusica.Visible = False
+        btnMusica.Visible = False
         btnTijeras.Visible = False
         btnPiedras.Visible = False
         btnPapel.Visible = False
@@ -73,11 +77,30 @@
             pbx1.Visible = True
         End If
         If sec = 16 Then
+            My.Computer.Audio.Play(My.Resources.Cotton_Eye_Joe_Lyrics, AudioPlayMode.BackgroundLoop)
+            lblMusica.Visible = True
+            btnMusica.Visible = True
             Label1.Visible = True
             btnTijeras.Visible = True
             btnPiedras.Visible = True
             btnPapel.Visible = True
             pbx1.Visible = False
+        End If
+    End Sub
+
+    Private Sub minijuego_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        My.Computer.Audio.Stop()
+    End Sub
+
+    Private Sub btnMusica_Click(sender As Object, e As EventArgs) Handles btnMusica.Click
+        If btnMusica.Text = "On" Then
+            btnMusica.Text = "Off"
+            btnMusica.BackColor = Color.Red
+            My.Computer.Audio.Stop()
+        ElseIf btnMusica.Text = "Off" Then
+            btnMusica.Text = "On"
+            My.Computer.Audio.Play(My.Resources.Cotton_Eye_Joe_Lyrics, AudioPlayMode.BackgroundLoop)
+            btnMusica.BackColor = Color.Green
         End If
     End Sub
 End Class
