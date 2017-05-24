@@ -183,11 +183,30 @@ Public Class Juego
 
             lblEnunciado.Text = lines2(contEnunciados)
         End If
-
+        Button1.Enabled = False
+        Button1.BackColor = Color.Blue
+        Button2.Enabled = False
+        Button2.BackColor = Color.Blue
+        Button3.Enabled = False
+        Button3.BackColor = Color.Blue
+        Button4.Enabled = False
+        Button4.BackColor = Color.Blue
+        Button5.Enabled = False
+        Button5.BackColor = Color.Blue
+        Button6.Enabled = False
+        Button6.BackColor = Color.Blue
+        Button7.Enabled = False
+        Button7.BackColor = Color.Blue
+        Button8.Enabled = False
+        Button8.BackColor = Color.Blue
+        Button9.Enabled = False
+        Button9.BackColor = Color.Blue
+        Button10.Enabled = False
+        Button10.BackColor = Color.Blue
     End Sub
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnOtraPregunta.Click
-
+        pCarrito.Visible = False
         lstPedidos.Items.Clear()
         Button1.Enabled = True
         Button1.BackColor = Color.Beige
@@ -209,18 +228,24 @@ Public Class Juego
         Button9.BackColor = Color.Beige
         Button10.Enabled = True
         Button10.BackColor = Color.Beige
-        For i = 0 To tienda.Articulos.Count - 1
-            tienda.Articulos(i).Stock = 50
-        Next
+        cantidadTotal = 0
         btnOtraPregunta.Enabled = False
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub Juego_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         My.Computer.Audio.Stop()
+
+    End Sub
+
+    Private Sub btnPedir_Click(sender As Object, e As EventArgs) Handles btnPedir.Click
+        InputBox("Cuanta cantidad de paquetes desea?")
+
+
+        lstAlmacen.ClearSelected()
 
     End Sub
 End Class

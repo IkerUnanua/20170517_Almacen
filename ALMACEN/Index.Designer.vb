@@ -28,7 +28,7 @@ Partial Class index
         Me.btnJugar = New System.Windows.Forms.Button()
         Me.btnInstrucciones = New System.Windows.Forms.Button()
         Me.btnAdministrador = New System.Windows.Forms.Button()
-        Me.btnRanking = New System.Windows.Forms.Button()
+        Me.btnMinijuego = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -70,12 +70,12 @@ Partial Class index
         Me.btnAdministrador.Name = "btnAdministrador"
         Me.btnAdministrador.UseVisualStyleBackColor = False
         '
-        'btnRanking
+        'btnMinijuego
         '
-        Me.btnRanking.BackColor = System.Drawing.SystemColors.ActiveCaption
-        resources.ApplyResources(Me.btnRanking, "btnRanking")
-        Me.btnRanking.Name = "btnRanking"
-        Me.btnRanking.UseVisualStyleBackColor = False
+        Me.btnMinijuego.BackColor = System.Drawing.SystemColors.ActiveCaption
+        resources.ApplyResources(Me.btnMinijuego, "btnMinijuego")
+        Me.btnMinijuego.Name = "btnMinijuego"
+        Me.btnMinijuego.UseVisualStyleBackColor = False
         '
         'btnSalir
         '
@@ -107,7 +107,7 @@ Partial Class index
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.btnRanking)
+        Me.Controls.Add(Me.btnMinijuego)
         Me.Controls.Add(Me.btnAdministrador)
         Me.Controls.Add(Me.btnInstrucciones)
         Me.Controls.Add(Me.btnJugar)
@@ -128,7 +128,7 @@ Partial Class index
     Friend WithEvents btnJugar As Button
     Friend WithEvents btnInstrucciones As Button
     Friend WithEvents btnAdministrador As Button
-    Friend WithEvents btnRanking As Button
+    Friend WithEvents btnMinijuego As Button
     Friend WithEvents btnSalir As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label

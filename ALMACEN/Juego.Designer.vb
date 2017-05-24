@@ -22,7 +22,6 @@ Partial Class Juego
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Juego))
         Me.pCarrito = New System.Windows.Forms.PictureBox()
         Me.lstPedidos = New System.Windows.Forms.ListBox()
@@ -42,7 +41,7 @@ Partial Class Juego
         Me.lstAlmacen = New System.Windows.Forms.ListBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnOtraPregunta = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnPedir = New System.Windows.Forms.Button()
         CType(Me.pCarrito, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -218,8 +217,14 @@ Partial Class Juego
         Me.btnOtraPregunta.Text = "Otra pregunta"
         Me.btnOtraPregunta.UseVisualStyleBackColor = True
         '
-        'Timer1
+        'btnPedir
         '
+        Me.btnPedir.Location = New System.Drawing.Point(754, 407)
+        Me.btnPedir.Name = "btnPedir"
+        Me.btnPedir.Size = New System.Drawing.Size(84, 37)
+        Me.btnPedir.TabIndex = 29
+        Me.btnPedir.Text = "Pedir paquetes"
+        Me.btnPedir.UseVisualStyleBackColor = True
         '
         'Juego
         '
@@ -228,6 +233,7 @@ Partial Class Juego
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(850, 472)
+        Me.Controls.Add(Me.btnPedir)
         Me.Controls.Add(Me.btnOtraPregunta)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lstAlmacen)
@@ -274,5 +280,5 @@ Partial Class Juego
     Friend WithEvents lstAlmacen As ListBox
     Friend WithEvents Label3 As Label
     Friend WithEvents btnOtraPregunta As Button
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents btnPedir As Button
 End Class

@@ -22,10 +22,15 @@ Partial Class Administrador
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Administrador))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnArticulos = New System.Windows.Forms.Button()
         Me.btnEnunciados = New System.Windows.Forms.Button()
         Me.btnInfo = New System.Windows.Forms.Button()
+        Me.btnContraseñas = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -65,11 +70,42 @@ Partial Class Administrador
         Me.btnInfo.Text = "Info"
         Me.btnInfo.UseVisualStyleBackColor = True
         '
+        'btnContraseñas
+        '
+        Me.btnContraseñas.Location = New System.Drawing.Point(68, 54)
+        Me.btnContraseñas.Name = "btnContraseñas"
+        Me.btnContraseñas.Size = New System.Drawing.Size(75, 23)
+        Me.btnContraseñas.TabIndex = 4
+        Me.btnContraseñas.Text = "Contraseñas"
+        Me.btnContraseñas.UseVisualStyleBackColor = True
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(352, 378)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.TabIndex = 5
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(271, 91)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(249, 231)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(777, 413)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnContraseñas)
         Me.Controls.Add(Me.btnInfo)
         Me.Controls.Add(Me.btnEnunciados)
         Me.Controls.Add(Me.btnArticulos)
@@ -77,6 +113,7 @@ Partial Class Administrador
         Me.Name = "Administrador"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Administrador"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -86,4 +123,7 @@ Partial Class Administrador
     Friend WithEvents btnArticulos As Button
     Friend WithEvents btnEnunciados As Button
     Friend WithEvents btnInfo As Button
+    Friend WithEvents btnContraseñas As Button
+    Friend WithEvents btnSalir As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

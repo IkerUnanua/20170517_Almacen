@@ -1989,31 +1989,31 @@
   <data name="&gt;&gt;btnAdministrador.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="btnRanking.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnMinijuego.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
-  <data name="btnRanking.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnMinijuego.Location" type="System.Drawing.Point, System.Drawing">
     <value>167, 409</value>
   </data>
-  <data name="btnRanking.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnMinijuego.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 38</value>
   </data>
-  <data name="btnRanking.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnMinijuego.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="btnRanking.Text" xml:space="preserve">
-    <value>VER RANKING</value>
+  <data name="btnMinijuego.Text" xml:space="preserve">
+    <value>MINIJUEGO</value>
   </data>
-  <data name="&gt;&gt;btnRanking.Name" xml:space="preserve">
-    <value>btnRanking</value>
+  <data name="&gt;&gt;btnMinijuego.Name" xml:space="preserve">
+    <value>btnMinijuego</value>
   </data>
-  <data name="&gt;&gt;btnRanking.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnMinijuego.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnRanking.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnMinijuego.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnRanking.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnMinijuego.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="btnSalir.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">

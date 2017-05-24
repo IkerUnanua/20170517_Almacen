@@ -2,22 +2,22 @@
 
 Public Class Administrador
     Private Sub btnInfo_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
-        Dim fichero As New StreamWriter("articulos.txt")
+        Dim fichero As New StreamWriter("ficheros/articulos.txt")
         Dim articulos(9) As String
         For i = 0 To 9
 
-            Do
-                articulos(i) = InputBox("Que articulo desea introducir")
-                If articulos(i) = "" Then
-                    MsgBox("Lo sentimos pero debe introducir un valor")
+            articulos(i) = InputBox("Que articulo desea introducir")
+                If String.IsNullOrWhiteSpace(articulos(i)) = "" Then
+                Exit Sub
+            End If
 
-                End If
-            Loop While articulos(i) = ""
-        Next
+    Next
 
         For i = 0 To articulos.Length - 1
             fichero.WriteLine("Articulo:" + articulos(i))
         Next
+        fichero.Close()
+
     End Sub
 
     Private Sub Administrador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -29,7 +29,7 @@ Public Class Administrador
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnInfo.Click
-        Dim file As New StreamReader("ficheros/infoAdmin")
+        Dim file As New StreamReader("ficheros/infoAdmin.txt")
 
         MsgBox(file.ReadToEnd())
         file.Close()
@@ -49,5 +49,16 @@ Public Class Administrador
             End If
         Loop Until enunciado = ""
         file.Close()
+    End Sub
+
+    Private Sub btnContraseñas_Click(sender As Object, e As EventArgs) Handles btnContraseñas.Click
+        Dim file As New StreamReader("ficheros/usuarios.txt")
+
+        MsgBox(file.ReadToEnd())
+        file.Close()
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Close()
     End Sub
 End Class

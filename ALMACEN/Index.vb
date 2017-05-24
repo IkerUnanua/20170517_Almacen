@@ -16,11 +16,9 @@ Public Class index
         file.Close()
     End Sub
 
-    Private Sub btnRanking_Click(sender As Object, e As EventArgs) Handles btnRanking.Click
-        Dim file As New StreamReader("ficheros/ranking.txt")
-
-        MsgBox(file.ReadToEnd())
-        file.Close()
+    Private Sub btnRanking_Click(sender As Object, e As EventArgs) Handles btnMinijuego.Click
+        Dim minijuego As New minijuego
+        minijuego.ShowDialog()
     End Sub
 
     Private Sub btnJugar_Click(sender As Object, e As EventArgs) Handles btnJugar.Click
