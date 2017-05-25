@@ -90,4 +90,18 @@ Public Class Administrador
             btnMusica.BackColor = Color.Green
         End If
     End Sub
+
+    Private Sub btnVerEnun_Click(sender As Object, e As EventArgs) Handles btnVerEnun.Click
+        Dim enunciados As New StreamReader("ficheros/enunciados.txt")
+
+        MsgBox(enunciados.ReadToEnd)
+        enunciados.Close()
+    End Sub
+
+    Private Sub btnVerProd_Click(sender As Object, e As EventArgs) Handles btnVerProd.Click
+        Dim productos As New StreamReader("ficheros/articulos.txt")
+
+        MsgBox(productos.ReadToEnd)
+        productos.Close()
+    End Sub
 End Class

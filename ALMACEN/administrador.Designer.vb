@@ -25,13 +25,15 @@ Partial Class Administrador
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Administrador))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnArticulos = New System.Windows.Forms.Button()
-        Me.btnEnunciados = New System.Windows.Forms.Button()
         Me.btnInfo = New System.Windows.Forms.Button()
         Me.btnContraseñas = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnMusica = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnEnunciados = New System.Windows.Forms.Button()
+        Me.btnVerEnun = New System.Windows.Forms.Button()
+        Me.btnVerProd = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,15 +55,6 @@ Partial Class Administrador
         Me.btnArticulos.TabIndex = 1
         Me.btnArticulos.Text = "Cambiar productos"
         Me.btnArticulos.UseVisualStyleBackColor = True
-        '
-        'btnEnunciados
-        '
-        Me.btnEnunciados.Location = New System.Drawing.Point(137, 299)
-        Me.btnEnunciados.Name = "btnEnunciados"
-        Me.btnEnunciados.Size = New System.Drawing.Size(113, 23)
-        Me.btnEnunciados.TabIndex = 2
-        Me.btnEnunciados.Text = "Cambiar enunciados"
-        Me.btnEnunciados.UseVisualStyleBackColor = True
         '
         'btnInfo
         '
@@ -119,11 +112,40 @@ Partial Class Administrador
         Me.Label4.TabIndex = 33
         Me.Label4.Text = "Música on/off"
         '
+        'btnEnunciados
+        '
+        Me.btnEnunciados.Location = New System.Drawing.Point(137, 299)
+        Me.btnEnunciados.Name = "btnEnunciados"
+        Me.btnEnunciados.Size = New System.Drawing.Size(113, 23)
+        Me.btnEnunciados.TabIndex = 2
+        Me.btnEnunciados.Text = "Cambiar enunciados"
+        Me.btnEnunciados.UseVisualStyleBackColor = True
+        '
+        'btnVerEnun
+        '
+        Me.btnVerEnun.Location = New System.Drawing.Point(18, 299)
+        Me.btnVerEnun.Name = "btnVerEnun"
+        Me.btnVerEnun.Size = New System.Drawing.Size(113, 23)
+        Me.btnVerEnun.TabIndex = 35
+        Me.btnVerEnun.Text = "Ver enunciados"
+        Me.btnVerEnun.UseVisualStyleBackColor = True
+        '
+        'btnVerProd
+        '
+        Me.btnVerProd.Location = New System.Drawing.Point(661, 299)
+        Me.btnVerProd.Name = "btnVerProd"
+        Me.btnVerProd.Size = New System.Drawing.Size(113, 23)
+        Me.btnVerProd.TabIndex = 36
+        Me.btnVerProd.Text = "Ver productos"
+        Me.btnVerProd.UseVisualStyleBackColor = True
+        '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(777, 413)
+        Me.Controls.Add(Me.btnVerProd)
+        Me.Controls.Add(Me.btnVerEnun)
         Me.Controls.Add(Me.btnMusica)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PictureBox1)
@@ -145,11 +167,13 @@ Partial Class Administrador
 
     Friend WithEvents Label1 As Label
     Friend WithEvents btnArticulos As Button
-    Friend WithEvents btnEnunciados As Button
     Friend WithEvents btnInfo As Button
     Friend WithEvents btnContraseñas As Button
     Friend WithEvents btnSalir As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnMusica As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents btnEnunciados As Button
+    Friend WithEvents btnVerEnun As Button
+    Friend WithEvents btnVerProd As Button
 End Class
