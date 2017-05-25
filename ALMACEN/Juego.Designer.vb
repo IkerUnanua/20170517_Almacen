@@ -45,6 +45,7 @@ Partial Class Juego
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnMusica = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         CType(Me.pCarrito, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -256,6 +257,15 @@ Partial Class Juego
         Me.btnMusica.Text = "On"
         Me.btnMusica.UseVisualStyleBackColor = False
         '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(773, -1)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.TabIndex = 33
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
         'Juego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -263,6 +273,7 @@ Partial Class Juego
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(850, 472)
+        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnMusica)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
@@ -317,4 +328,5 @@ Partial Class Juego
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents btnMusica As Button
+    Friend WithEvents btnSalir As Button
 End Class
